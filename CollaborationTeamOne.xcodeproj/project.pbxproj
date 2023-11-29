@@ -97,7 +97,7 @@
 			children = (
 				5DE3DFAC2B173C0E0065F510 /* TabBarController.swift */,
 				5DE3DFA82B173B740065F510 /* Tekla */,
-				5DE3DFA72B173B6A0065F510 /* Mariam */,
+				5DE3DFA72B173B6A0065F510 /*  WeatherPage */,
 				5DE3DFA52B173B3B0065F510 /* Sesili */,
 				5DE3DFA92B173B890065F510 /* Salome */,
 				5DE3DFA62B173B620065F510 /* Davit */,
@@ -121,12 +121,12 @@
 			path = Davit;
 			sourceTree = "<group>";
 		};
-		5DE3DFA72B173B6A0065F510 /* Mariam */ = {
+		5DE3DFA72B173B6A0065F510 /*  WeatherPage */ = {
 			isa = PBXGroup;
 			children = (
 				5DE3DFB02B173CA80065F510 /* WeatherController.swift */,
 			);
-			path = Mariam;
+			path = " WeatherPage";
 			sourceTree = "<group>";
 		};
 		5DE3DFA82B173B740065F510 /* Tekla */ = {
