@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "natenworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Natenadze/NatenWorking.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ea57242bc5d57fe883519153acdccdf5fbd56398"
+      }
+    }
+  ],
+  "version" : 2
+}
