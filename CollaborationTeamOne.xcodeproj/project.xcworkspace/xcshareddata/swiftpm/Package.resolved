@@ -8,6 +8,15 @@
         "branch" : "main",
         "revision" : "ea57242bc5d57fe883519153acdccdf5fbd56398"
       }
+    },
+    {
+      "identity" : "networkmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SesiliTs/NetworkManager",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ff1926a61f6eece572cd9dd08bdf86cc36231258"
+      }
     }
   ],
   "version" : 2
