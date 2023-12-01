@@ -222,7 +222,6 @@
 			mainGroup = 5DE3DF822B1739B30065F510;
 			packageReferences = (
 				5DE3DFB82B173FA40065F510 /* XCRemoteSwiftPackageReference "NatenWorking" */,
-				0BE180E82B18AB4D0042E9C1 /* XCRemoteSwiftPackageReference "NetworkManager" */,
 			);
 			productRefGroup = 5DE3DF8C2B1739B40065F510 /* Products */;
 			projectDirPath = "";
@@ -476,14 +475,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0BE180E82B18AB4D0042E9C1 /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SesiliTs/NetworkManager";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		5DE3DFB82B173FA40065F510 /* XCRemoteSwiftPackageReference "NatenWorking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Natenadze/NatenWorking.git";
