@@ -48,9 +48,9 @@ private extension AirQualityController {
     }
 }
 
-/*
- // MARK: - Preview
+
+  // MARK: - Preview
  #Preview {
  AirQualityController()
  }
- */
+ 
