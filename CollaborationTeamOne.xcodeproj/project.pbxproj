@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		397A59662B1A6A89008DC35D /* CityPollutionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A59652B1A6A89008DC35D /* CityPollutionInfo.swift */; };
+		397A596A2B1A6B0A008DC35D /* AirQualityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A59692B1A6B0A008DC35D /* AirQualityController.swift */; };
+		397A596C2B1A6B19008DC35D /* AirQualityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A596B2B1A6B19008DC35D /* AirQualityModel.swift */; };
 		5DE3DF8F2B1739B40065F510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DF8E2B1739B40065F510 /* AppDelegate.swift */; };
 		5DE3DF912B1739B40065F510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DF902B1739B40065F510 /* SceneDelegate.swift */; };
 		5DE3DF982B1739B50065F510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3DF972B1739B50065F510 /* Assets.xcassets */; };
 		5DE3DF9B2B1739B50065F510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3DF992B1739B50065F510 /* LaunchScreen.storyboard */; };
 		5DE3DFAD2B173C0E0065F510 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFAC2B173C0E0065F510 /* TabBarController.swift */; };
-		5DE3DFAF2B173C860065F510 /* AirQualityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFAE2B173C860065F510 /* AirQualityController.swift */; };
 		5DE3DFB12B173CA80065F510 /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB02B173CA80065F510 /* WeatherController.swift */; };
 		5DE3DFB32B173CD30065F510 /* SpecieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB22B173CD30065F510 /* SpecieController.swift */; };
 		5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		397A59652B1A6A89008DC35D /* CityPollutionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityPollutionInfo.swift; path = CollaborationTeamOne/Scenes/Tekla/Models/CityPollutionInfo.swift; sourceTree = SOURCE_ROOT; };
+		397A59692B1A6B0A008DC35D /* AirQualityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirQualityController.swift; path = CollaborationTeamOne/Scenes/Tekla/Views/AirQualityController.swift; sourceTree = SOURCE_ROOT; };
+		397A596B2B1A6B19008DC35D /* AirQualityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirQualityModel.swift; path = CollaborationTeamOne/Scenes/Tekla/ViewModels/AirQualityModel.swift; sourceTree = SOURCE_ROOT; };
 		5DE3DF8B2B1739B40065F510 /* CollaborationTeamOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollaborationTeamOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE3DF8E2B1739B40065F510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE3DF902B1739B40065F510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +33,6 @@
 		5DE3DF9A2B1739B50065F510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DE3DF9C2B1739B50065F510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE3DFAC2B173C0E0065F510 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		5DE3DFAE2B173C860065F510 /* AirQualityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityController.swift; sourceTree = "<group>"; };
 		5DE3DFB02B173CA80065F510 /* WeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		5DE3DFB22B173CD30065F510 /* SpecieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieController.swift; sourceTree = "<group>"; };
 		5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarResourceController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		397A59642B1A6A6E008DC35D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				397A59652B1A6A89008DC35D /* CityPollutionInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		397A59672B1A6AF4008DC35D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				397A59692B1A6B0A008DC35D /* AirQualityController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		397A59682B1A6AF8008DC35D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				397A596B2B1A6B19008DC35D /* AirQualityModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		5DE3DF822B1739B30065F510 = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +160,9 @@
 		5DE3DFA82B173B740065F510 /* Tekla */ = {
 			isa = PBXGroup;
 			children = (
-				5DE3DFAE2B173C860065F510 /* AirQualityController.swift */,
+				397A59682B1A6AF8008DC35D /* ViewModels */,
+				397A59672B1A6AF4008DC35D /* Views */,
+				397A59642B1A6A6E008DC35D /* Models */,
 			);
 			path = Tekla;
 			sourceTree = "<group>";
@@ -223,12 +253,14 @@
 			files = (
 				5DE3DFAD2B173C0E0065F510 /* TabBarController.swift in Sources */,
 				5DE3DFB32B173CD30065F510 /* SpecieController.swift in Sources */,
+				397A596C2B1A6B19008DC35D /* AirQualityModel.swift in Sources */,
+				397A596A2B1A6B0A008DC35D /* AirQualityController.swift in Sources */,
 				5DE3DFB12B173CA80065F510 /* WeatherController.swift in Sources */,
 				5DE3DF8F2B1739B40065F510 /* AppDelegate.swift in Sources */,
 				5DE3DFB72B173CFB0065F510 /* PopulationController.swift in Sources */,
+				397A59662B1A6A89008DC35D /* CityPollutionInfo.swift in Sources */,
 				5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */,
 				5DE3DF912B1739B40065F510 /* SceneDelegate.swift in Sources */,
-				5DE3DFAF2B173C860065F510 /* AirQualityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
