@@ -19,13 +19,13 @@ final class PopulationController: UIViewController {
     private let mainStack = UIStackView()
     
     private let textField: UITextField = {
-        let tf = UITextField()
-        tf.backgroundColor = .systemBackground
-        tf.layer.cornerRadius = 8
-        tf.autocorrectionType = .no
-        tf.autocapitalizationType = .words
-        tf.placeholder = "Enter city name..."
-        return tf
+        let textfield = UITextField()
+        textfield.backgroundColor = .systemBackground
+        textfield.layer.cornerRadius = 8
+        textfield.autocorrectionType = .no
+        textfield.autocapitalizationType = .words
+        textfield.placeholder = "Enter city name..."
+        return textfield
     }()
     
     private let showPopulationButton: UIButton = {
@@ -89,7 +89,6 @@ private extension PopulationController {
         mainStack.translatesAutoresizingMaskIntoConstraints = false
         mainStack.axis = .vertical
         mainStack.spacing = 20
-        mainStack.alignment = .fill
         
         showPopulationButton.addAction(UIAction(handler: { [weak self] _ in
             self?.showPopulationButtonPressed()
@@ -126,8 +125,10 @@ private extension PopulationController {
 extension PopulationController: PopulationControllerViewModelDelegate {
     
     func showAlert(title: String, message: String) {
-        AlertManager.showAlert(title: title, message: message, controller: self) {
-            self.textField.text = ""
+        DispatchQueue.main.async {
+            AlertManager.showAlert(title: title, message: message, controller: self) {
+                self.textField.text = ""
+            }
         }
     }
     
@@ -153,7 +154,7 @@ extension PopulationController: PopulationControllerViewModelDelegate {
 class AlertManager {
     
     static func showAlert(title: String, message: String, controller: UIViewController, completion: @escaping () -> Void) {
-        DispatchQueue.main.async {
+       
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -164,7 +165,7 @@ class AlertManager {
             
             
             controller.present(alertController, animated: true, completion: nil)
-        }
+        
         
     }
     
