@@ -107,8 +107,8 @@ final class SpecieTableViewCell: UITableViewCell {
     }
     
     func configure(with specie: Species) {
-        
-        specieImage.loadFrom(stringUrl: specie.taxon.defaultPhoto.url)
+        guard let url = URL(string: specie.taxon.defaultPhoto.url) else { return }
+        specieImage.load(url: url)
         nameLabel.text = specie.taxon.name
         authorLabel.text = specie.taxon.defaultPhoto.attribution
         wikipediaLabel.text = specie.taxon.wikipediaURL
@@ -116,15 +116,17 @@ final class SpecieTableViewCell: UITableViewCell {
     
 }
 
-private extension UIImageView {
-    func loadFrom(stringUrl: String) {
-        if let url = URL(string: stringUrl) {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                guard let imageData = data else { return }
-                DispatchQueue.main.async {
-                    self.image = UIImage(data: imageData)
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
                 }
-            }.resume()
+            }
         }
     }
 }
+

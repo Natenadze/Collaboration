@@ -47,7 +47,9 @@ final class SpecieViewModel {
                 await MainActor.run {
                     species.removeAll()
                     species = result.results
-                    delegate?.reloadData(tableView: tableView)
+                    DispatchQueue.main.async {
+                        self.delegate?.reloadData(tableView: tableView)
+                    }
                 }
             } else {
                 throw NetworkError.noData

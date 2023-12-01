@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct SpecieResponse: Codable {
+struct SpecieResponse: Decodable {
     let results: [Species]
     
 }
 
 // MARK: - Result
-struct Species: Codable {
+struct Species: Decodable {
     let count: Int
     let taxon: Taxon
 }
 
 // MARK: - Taxon
-struct Taxon: Codable {
+struct Taxon: Decodable {
     let name: String
     let defaultPhoto: DefaultPhoto
     let wikipediaURL: String?
@@ -32,7 +32,7 @@ struct Taxon: Codable {
 }
 
 // MARK: - DefaultPhoto
-struct DefaultPhoto: Codable {
+struct DefaultPhoto: Decodable {
     let attribution: String
     let url: String
     
