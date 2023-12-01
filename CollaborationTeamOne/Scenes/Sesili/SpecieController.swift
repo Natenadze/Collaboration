@@ -1,135 +1,57 @@
+//
+//  SpecieController.swift
+//  CollaborationTeamOne
+//
+//  Created by Davit Natenadze on 29.11.23.
+//
+
 import UIKit
+
 
 final class SpecieController: UIViewController {
     
     // MARK: - Properties
     
-    var viewModel = SpecieViewModel()
     
-    private let cityNameTextField = {
-        let textField = UITextField()
-        textField.placeholder = "city"
-        textField.setLeftPaddingPoints(10)
-        textField.font = .systemFont(ofSize: 15)
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemGray5.cgColor
-        textField.layer.cornerRadius = 15
-        textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        return textField
-    }()
+    // MARK: - UI Elements
     
-    private let showInfoButton = {
-        let button = UIButton()
-        button.backgroundColor = .orange
-        button.setTitle("SHOW INFO", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
-        button.layer.cornerRadius = 15
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        return button
-    }()
     
-    private var cityID: Int = 0
-    
-    private var cityName: String = ""
-    
-    private let tableView = UITableView()
-    
-    private let stackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        return stackView
-    }()
-    
-    // MARK: - ViewLifeCycle
+    // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        addViews()
-        setupTableView()
-        setupStackView()
-        showInfoButtonAction()
-        addDelegate()
+        style()
+        layout()
     }
     
-    // MARK: - Private Methods
+    // MARK: - Methods
     
-    private func addViews() {
-        view.addSubview(stackView)
-        stackView.addArrangedSubview(cityNameTextField)
-        stackView.addArrangedSubview(showInfoButton)
-        stackView.addArrangedSubview(tableView)
+}
+
+
+// MARK: - Style & Layout
+
+private extension SpecieController {
+    
+    
+    func style() {
+        view.backgroundColor = .red
+        
     }
     
-    private func setupStackView() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+    func layout() {
+        
+        
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30)
+            
+            
         ])
-    }
-    
-    private func setupTableView() {
-        registerTableViewCells()
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
-    
-    private func registerTableViewCells() {
-        tableView.register(SpecieTableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-    
-    private func showInfoButtonAction() {
-        showInfoButton.addAction(UIAction(handler: { [weak self] action  in
-            guard let self else { return }
-            self.cityName = self.cityNameTextField.text ?? ""
-            viewModel.fetchCity(cityName: cityName, tableView: tableView)
-        }), for: .touchUpInside)
-    }
-    
-    private func addDelegate() {
-        viewModel.delegate = self
-    }
-    
-}
-
-
-// MARK: - Extensions
-
-extension SpecieController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        
     }
 }
 
-extension SpecieController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.species.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SpecieTableViewCell
-        let currentSpecie = viewModel.species[indexPath.row]
-        cell.configure(with: currentSpecie)
-        return cell
-    }
-    
-}
-
-private extension UITextField {
-    func setLeftPaddingPoints(_ amount:CGFloat) {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-        self.leftView = paddingView
-        self.leftViewMode = .always
-    }
-}
-
-extension SpecieController: SpecieViewModelDelegate {
-    func reloadData(tableView: UITableView) {
-        tableView.reloadData()
-    }
-}
-
+/*
+ // MARK: - Preview
+ #Preview {
+ SpecieController()
+ }
+ */

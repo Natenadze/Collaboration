@@ -1,5 +1,5 @@
 //
-//  AirQualityController.swift
+//  WeatherController.swift
 //  CollaborationTeamOne
 //
 //  Created by Davit Natenadze on 29.11.23.
@@ -7,7 +7,8 @@
 
 import UIKit
 
-final class AirQualityController: UIViewController {
+
+final class WeatherController: UIViewController {
     
     // MARK: - Properties
     
@@ -29,11 +30,11 @@ final class AirQualityController: UIViewController {
 
 // MARK: - Style & Layout
 
-private extension AirQualityController {
+private extension WeatherController {
     
     
     func style() {
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = .blue
         
     }
     
@@ -51,6 +52,6 @@ private extension AirQualityController {
 /*
  // MARK: - Preview
  #Preview {
- AirQualityController()
+ WeatherController()
  }
  */
