@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+struct WeatherData: Decodable {
+    let list: [List]
+    
+    struct List: Decodable {
+        let main: Main
+        
+        struct Main: Decodable {
+            let temp: Double
+        }
+    }
+}
+
+
+
