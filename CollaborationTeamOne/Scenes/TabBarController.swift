@@ -18,8 +18,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         setupTabs()
         let navBarAppearance = UINavigationBarAppearance()
-        //        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.configureWithTransparentBackground() // to hide Navigation Bar Line
+        navBarAppearance.configureWithTransparentBackground()
         navBarAppearance.backgroundColor = .systemBackground
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
@@ -46,15 +45,11 @@ final class TabBarController: UITabBarController {
     private func createNavigation(_ title: String, _ image: UIImage?, controller: UIViewController) -> UINavigationController {
         
         let navController = UINavigationController(rootViewController: controller)
-        
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
-        
         navController.navigationItem.title = "nav title"
         navController.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.red], for: .selected)
-        
         navController.viewControllers.first?.navigationItem.title = title + "Controller"
-        
         return navController
     }
     

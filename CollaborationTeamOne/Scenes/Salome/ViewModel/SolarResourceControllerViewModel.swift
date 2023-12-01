@@ -11,7 +11,7 @@ import Foundation
 import NatenWorking
 
 
-class SolarResourceControllerViewModel {
+final class SolarResourceControllerViewModel {
     
     private (set) var result = ""
 

@@ -149,25 +149,3 @@ extension PopulationController: PopulationControllerViewModelDelegate {
     PopulationController()
 }
 
-
-//TODO: - Move this class to proper folder
-class AlertManager {
-    
-    static func showAlert(title: String, message: String, controller: UIViewController, completion: @escaping () -> Void) {
-       
-            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                
-                completion()
-            }
-            alertController.addAction(okAction)
-            
-            
-            controller.present(alertController, animated: true, completion: nil)
-        
-        
-    }
-    
-    
-}

@@ -31,6 +31,8 @@
 		5DE3DFBF2B1774D90065F510 /* PopulationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */; };
 		5DE3DFC22B1777620065F510 /* PopulationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFC12B1777620065F510 /* PopulationModel.swift */; };
 		5DE3DFC52B17903C0065F510 /* DateAndPopulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */; };
+		5DFD32BC2B1A73AC009946F1 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD32BB2B1A73AC009946F1 /* Int+Extension.swift */; };
+		5DFD32BE2B1A73C8009946F1 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD32BD2B1A73C8009946F1 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationControllerViewModel.swift; sourceTree = "<group>"; };
 		5DE3DFC12B1777620065F510 /* PopulationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationModel.swift; sourceTree = "<group>"; };
 		5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndPopulationView.swift; sourceTree = "<group>"; };
+		5DFD32BB2B1A73AC009946F1 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		5DFD32BD2B1A73C8009946F1 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			children = (
 				5DE3DFA22B173AE40065F510 /* App */,
 				5DE3DFA42B173AF70065F510 /* Scenes */,
+				5DFD32BA2B1A7391009946F1 /* Utilities */,
 				5DE3DFA32B173AEF0065F510 /* Files */,
 				5DE3DF9C2B1739B50065F510 /* Info.plist */,
 			);
@@ -272,6 +277,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5DFD32BA2B1A7391009946F1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5DFD32BD2B1A73C8009946F1 /* AlertManager.swift */,
+				5DFD32BB2B1A73AC009946F1 /* Int+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,6 +367,8 @@
 				0BE180E42B187D060042E9C1 /* CityModel.swift in Sources */,
 				0BE180E12B187A430042E9C1 /* SpecieViewModel.swift in Sources */,
 				5DE3DFB32B173CD30065F510 /* SpecieController.swift in Sources */,
+				5DFD32BC2B1A73AC009946F1 /* Int+Extension.swift in Sources */,
+				5DFD32BE2B1A73C8009946F1 /* AlertManager.swift in Sources */,
 				397A596C2B1A6B19008DC35D /* AirQualityModel.swift in Sources */,
 				397A59762B1A6F6A008DC35D /* SolarResourceController.swift in Sources */,
 				397A59742B1A6F64008DC35D /* SolarResourceControllerViewModel.swift in Sources */,

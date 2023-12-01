@@ -44,7 +44,6 @@ final class PopulationControllerViewModel {
         return formatPopulationNumber(populationNumber: population)
     }
     
-    //TODO: - Make separate file for formatter
     func formatPopulationNumber(populationNumber: Int) -> String {
         populationNumber.formatNumber()
     }
@@ -71,18 +70,5 @@ extension PopulationControllerViewModel {
 
 
 
-extension Int {
-    
-    func formatNumber() -> String {
-        
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        
-        if let formattedNumber = numberFormatter.string(from: NSNumber(value: self)) {
-            return formattedNumber
-        }
-        
-        return "0"
-    }
-}
+
 
