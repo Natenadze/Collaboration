@@ -22,6 +22,9 @@
 		5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */; };
 		5DE3DFB72B173CFB0065F510 /* PopulationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB62B173CFB0065F510 /* PopulationController.swift */; };
 		5DE3DFBA2B173FA40065F510 /* NatenWorking in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE3DFB92B173FA40065F510 /* NatenWorking */; };
+		5DE3DFBF2B1774D90065F510 /* PopulationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */; };
+		5DE3DFC22B1777620065F510 /* PopulationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFC12B1777620065F510 /* PopulationModel.swift */; };
+		5DE3DFC52B17903C0065F510 /* DateAndPopulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		5DE3DFB22B173CD30065F510 /* SpecieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieController.swift; sourceTree = "<group>"; };
 		5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarResourceController.swift; sourceTree = "<group>"; };
 		5DE3DFB62B173CFB0065F510 /* PopulationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationController.swift; sourceTree = "<group>"; };
+		5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationControllerViewModel.swift; sourceTree = "<group>"; };
+		5DE3DFC12B1777620065F510 /* PopulationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationModel.swift; sourceTree = "<group>"; };
+		5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndPopulationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +150,9 @@
 		5DE3DFA62B173B620065F510 /* Davit */ = {
 			isa = PBXGroup;
 			children = (
-				5DE3DFB62B173CFB0065F510 /* PopulationController.swift */,
+				5DE3DFC02B1777410065F510 /* Model */,
+				5DE3DFC32B178FDE0065F510 /* View */,
+				5DE3DFC62B17ACB60065F510 /* ViewModel */,
 			);
 			path = Davit;
 			sourceTree = "<group>";
@@ -171,6 +179,31 @@
 				5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */,
 			);
 			path = Salome;
+			sourceTree = "<group>";
+		};
+		5DE3DFC02B1777410065F510 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DE3DFC12B1777620065F510 /* PopulationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DE3DFC32B178FDE0065F510 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */,
+				5DE3DFB62B173CFB0065F510 /* PopulationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DE3DFC62B17ACB60065F510 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,12 +288,16 @@
 				5DE3DFB32B173CD30065F510 /* SpecieController.swift in Sources */,
 				5DE3DFB12B173CA80065F510 /* WeatherController.swift in Sources */,
 				5DE3DF8F2B1739B40065F510 /* AppDelegate.swift in Sources */,
-				0BE180DF2B17D2D30042E9C1 /* SpecieTableViewCell.swift in Sources */,
+
+				5DE3DFC22B1777620065F510 /* PopulationModel.swift in Sources */,
+
 				5DE3DFB72B173CFB0065F510 /* PopulationController.swift in Sources */,
 				5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */,
+				5DE3DFBF2B1774D90065F510 /* PopulationControllerViewModel.swift in Sources */,
 				5DE3DF912B1739B40065F510 /* SceneDelegate.swift in Sources */,
 				0BE180E62B187D120042E9C1 /* SpecieModel.swift in Sources */,
 				5DE3DFAF2B173C860065F510 /* AirQualityController.swift in Sources */,
+				5DE3DFC52B17903C0065F510 /* DateAndPopulationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
