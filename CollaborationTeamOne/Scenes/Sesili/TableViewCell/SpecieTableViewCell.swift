@@ -64,7 +64,6 @@ final class SpecieTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        sampleCellInfo()
         addViews()
         setupConstraints()
         prepareForReuse()
@@ -80,12 +79,6 @@ final class SpecieTableViewCell: UITableViewCell {
         specieImage.image = nil
         nameLabel.text = nil
         authorLabel.text = nil
-    }
-    
-    private func sampleCellInfo() {
-        specieImage.image = .sample
-        nameLabel.text = "Mia the fluffy predator"
-        authorLabel.text = "Sesili Tsikaridze"
     }
     
     private func addViews() {
