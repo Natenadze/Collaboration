@@ -30,7 +30,7 @@ final class SpecieController: UIViewController {
     
     private var cityID: Int = 0
     
-    var cityName: String = ""
+    private var cityName: String = ""
     
     private let tableView = UITableView()
     
@@ -41,16 +41,13 @@ final class SpecieController: UIViewController {
         return stackView
     }()
     
-
-    
-    
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         addViews()
-        setupStackView()
         setupTableView()
+        setupStackView()
         showInfoButtonAction()
         addDelegate()
     }
@@ -88,8 +85,7 @@ final class SpecieController: UIViewController {
         showInfoButton.addAction(UIAction(handler: { [weak self] action  in
             guard let self else { return }
             self.cityName = self.cityNameTextField.text ?? ""
-            print(self.cityName)
-            viewModel.fetchCity(cityName: cityName)
+            viewModel.fetchCity(cityName: cityName, tableView: tableView)
         }), for: .touchUpInside)
     }
     
@@ -104,18 +100,20 @@ final class SpecieController: UIViewController {
 
 extension SpecieController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        100
     }
 }
 
 extension SpecieController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        viewModel.species.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SpecieTableViewCell
+        let currentSpecie = viewModel.species[indexPath.row]
+        cell.configure(with: currentSpecie)
         return cell
     }
     
@@ -130,10 +128,8 @@ private extension UITextField {
 }
 
 extension SpecieController: SpecieViewModelDelegate {
-    func cityFetched(_ city: City) {
-        cityID = city.id
-        print(cityID)
+    func reloadData(tableView: UITableView) {
+        tableView.reloadData()
     }
-    
 }
 

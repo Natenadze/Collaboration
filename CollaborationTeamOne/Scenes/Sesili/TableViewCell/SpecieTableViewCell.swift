@@ -7,14 +7,16 @@
 
 import UIKit
 
-class SpecieTableViewCell: UITableViewCell {
+final class SpecieTableViewCell: UITableViewCell {
     
     private let specieImage = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
-        image.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        image.layer.cornerRadius = 10
+        image.clipsToBounds = true
+        image.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 90).isActive = true
         return image
     }()
     
@@ -29,7 +31,16 @@ class SpecieTableViewCell: UITableViewCell {
     
     private let authorLabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14, weight: .thin)
+        label.font = .systemFont(ofSize: 12, weight: .thin)
+        label.textColor = .darkGray
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private let wikipediaLabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12, weight: .thin)
         label.textColor = .lightGray
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -47,8 +58,7 @@ class SpecieTableViewCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 30
-//        stackView.distribution = .equalCentering
-//        stackView.alignment = .leading
+        stackView.alignment = .trailing
         return stackView
     }()
     
@@ -57,7 +67,7 @@ class SpecieTableViewCell: UITableViewCell {
         sampleCellInfo()
         addViews()
         setupConstraints()
-//        prepareForReuse()
+        prepareForReuse()
     }
     
     required init?(coder: NSCoder) {
@@ -82,6 +92,7 @@ class SpecieTableViewCell: UITableViewCell {
         contentView.addSubview(mainStackView)
         labelStackView.addArrangedSubview(nameLabel)
         labelStackView.addArrangedSubview(authorLabel)
+        labelStackView.addArrangedSubview(wikipediaLabel)
         mainStackView.addArrangedSubview(specieImage)
         mainStackView.addArrangedSubview(labelStackView)
     }
@@ -94,5 +105,26 @@ class SpecieTableViewCell: UITableViewCell {
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
         ])
     }
+    
+    func configure(with specie: Species) {
+        
+        specieImage.loadFrom(stringUrl: specie.taxon.defaultPhoto.url)
+        nameLabel.text = specie.taxon.name
+        authorLabel.text = specie.taxon.defaultPhoto.attribution
+        wikipediaLabel.text = specie.taxon.wikipediaURL
+    }
+    
+}
 
+private extension UIImageView {
+    func loadFrom(stringUrl: String) {
+        if let url = URL(string: stringUrl) {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let imageData = data else { return }
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: imageData)
+                }
+            }.resume()
+        }
+    }
 }

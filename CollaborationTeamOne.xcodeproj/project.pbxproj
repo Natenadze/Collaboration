@@ -18,7 +18,7 @@
 		5DE3DFAD2B173C0E0065F510 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFAC2B173C0E0065F510 /* TabBarController.swift */; };
 		5DE3DFAF2B173C860065F510 /* AirQualityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFAE2B173C860065F510 /* AirQualityController.swift */; };
 		5DE3DFB12B173CA80065F510 /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB02B173CA80065F510 /* WeatherController.swift */; };
-		5DE3DFB32B173CD30065F510 /* SpecieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB22B173CD30065F510 /* SpecieViewController.swift */; };
+		5DE3DFB32B173CD30065F510 /* SpecieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB22B173CD30065F510 /* SpecieController.swift */; };
 		5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */; };
 		5DE3DFB72B173CFB0065F510 /* PopulationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB62B173CFB0065F510 /* PopulationController.swift */; };
 		5DE3DFBA2B173FA40065F510 /* NatenWorking in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE3DFB92B173FA40065F510 /* NatenWorking */; };
@@ -38,7 +38,7 @@
 		5DE3DFAC2B173C0E0065F510 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5DE3DFAE2B173C860065F510 /* AirQualityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityController.swift; sourceTree = "<group>"; };
 		5DE3DFB02B173CA80065F510 /* WeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
-		5DE3DFB22B173CD30065F510 /* SpecieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieViewController.swift; sourceTree = "<group>"; };
+		5DE3DFB22B173CD30065F510 /* SpecieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieController.swift; sourceTree = "<group>"; };
 		5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarResourceController.swift; sourceTree = "<group>"; };
 		5DE3DFB62B173CFB0065F510 /* PopulationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +135,7 @@
 			children = (
 				0BE180E72B187D150042E9C1 /* Models */,
 				0BE180E22B187A4C0042E9C1 /* TableViewCell */,
-				5DE3DFB22B173CD30065F510 /* SpecieViewController.swift */,
+				5DE3DFB22B173CD30065F510 /* SpecieController.swift */,
 				0BE180E02B187A430042E9C1 /* SpecieViewModel.swift */,
 			);
 			path = Sesili;
@@ -253,7 +253,7 @@
 				5DE3DFAD2B173C0E0065F510 /* TabBarController.swift in Sources */,
 				0BE180E42B187D060042E9C1 /* CityModel.swift in Sources */,
 				0BE180E12B187A430042E9C1 /* SpecieViewModel.swift in Sources */,
-				5DE3DFB32B173CD30065F510 /* SpecieViewController.swift in Sources */,
+				5DE3DFB32B173CD30065F510 /* SpecieController.swift in Sources */,
 				5DE3DFB12B173CA80065F510 /* WeatherController.swift in Sources */,
 				5DE3DF8F2B1739B40065F510 /* AppDelegate.swift in Sources */,
 				0BE180DF2B17D2D30042E9C1 /* SpecieTableViewCell.swift in Sources */,
