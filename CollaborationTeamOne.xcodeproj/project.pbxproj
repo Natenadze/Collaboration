@@ -27,14 +27,9 @@
 		5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */; };
 		5DE3DFB72B173CFB0065F510 /* PopulationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFB62B173CFB0065F510 /* PopulationController.swift */; };
 		5DE3DFBA2B173FA40065F510 /* NatenWorking in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE3DFB92B173FA40065F510 /* NatenWorking */; };
-
-		F192B2F42B1AC5B500411663 /* SolarResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F192B2F32B1AC5B500411663 /* SolarResourceModel.swift */; };
-		F192B2F82B1AC64400411663 /* SolarResourceControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F192B2F72B1AC64400411663 /* SolarResourceControllerViewModel.swift */; };
-
 		5DE3DFBF2B1774D90065F510 /* PopulationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */; };
 		5DE3DFC22B1777620065F510 /* PopulationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFC12B1777620065F510 /* PopulationModel.swift */; };
 		5DE3DFC52B17903C0065F510 /* DateAndPopulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,14 +54,9 @@
 		5DE3DFB22B173CD30065F510 /* SpecieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieController.swift; sourceTree = "<group>"; };
 		5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarResourceController.swift; sourceTree = "<group>"; };
 		5DE3DFB62B173CFB0065F510 /* PopulationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationController.swift; sourceTree = "<group>"; };
-
-		F192B2F32B1AC5B500411663 /* SolarResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarResourceModel.swift; sourceTree = "<group>"; };
-		F192B2F72B1AC64400411663 /* SolarResourceControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarResourceControllerViewModel.swift; sourceTree = "<group>"; };
-
 		5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationControllerViewModel.swift; sourceTree = "<group>"; };
 		5DE3DFC12B1777620065F510 /* PopulationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationModel.swift; sourceTree = "<group>"; };
 		5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndPopulationView.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,55 +188,32 @@
 		5DE3DFA92B173B890065F510 /* Salome */ = {
 			isa = PBXGroup;
 			children = (
-				F192B2F22B1AC58C00411663 /* Model */,
-				F192B2F52B1AC5CF00411663 /* View */,
+				5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */,
 			);
 			path = Salome;
 			sourceTree = "<group>";
 		};
-
-		F192B2F22B1AC58C00411663 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F192B2F32B1AC5B500411663 /* SolarResourceModel.swift */,
-
 		5DE3DFC02B1777410065F510 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5DE3DFC12B1777620065F510 /* PopulationModel.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-
-		F192B2F52B1AC5CF00411663 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5DE3DFB42B173CE60065F510 /* SolarResourceController.swift */,
-				F192B2F62B1AC61300411663 /* ViewModel */,
-
 		5DE3DFC32B178FDE0065F510 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5DE3DFC42B17903C0065F510 /* DateAndPopulationView.swift */,
 				5DE3DFB62B173CFB0065F510 /* PopulationController.swift */,
-
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-
-		F192B2F62B1AC61300411663 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F192B2F72B1AC64400411663 /* SolarResourceControllerViewModel.swift */,
-
 		5DE3DFC62B17ACB60065F510 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				5DE3DFBE2B1774D90065F510 /* PopulationControllerViewModel.swift */,
-
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,7 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F192B2F42B1AC5B500411663 /* SolarResourceModel.swift in Sources */,
 				5DE3DFAD2B173C0E0065F510 /* TabBarController.swift in Sources */,
 				0BE180E42B187D060042E9C1 /* CityModel.swift in Sources */,
 				0BE180E12B187A430042E9C1 /* SpecieViewModel.swift in Sources */,
@@ -342,7 +308,6 @@
 				5DE3DFC22B1777620065F510 /* PopulationModel.swift in Sources */,
 
 				5DE3DFB72B173CFB0065F510 /* PopulationController.swift in Sources */,
-				F192B2F82B1AC64400411663 /* SolarResourceControllerViewModel.swift in Sources */,
 				5DE3DFB52B173CE60065F510 /* SolarResourceController.swift in Sources */,
 				5DE3DFBF2B1774D90065F510 /* PopulationControllerViewModel.swift in Sources */,
 				5DE3DF912B1739B40065F510 /* SceneDelegate.swift in Sources */,
