@@ -1,15 +1,13 @@
 //
-//  PopulationController.swift
+//  AirQualityController.swift
 //  CollaborationTeamOne
 //
 //  Created by Davit Natenadze on 29.11.23.
 //
 
-
 import UIKit
 
-
-final class PopulationController: UIViewController {
+final class AirQualityController: UIViewController {
     
     // MARK: - Properties
     
@@ -31,11 +29,11 @@ final class PopulationController: UIViewController {
 
 // MARK: - Style & Layout
 
-private extension PopulationController {
+private extension AirQualityController {
     
     
     func style() {
-        view.backgroundColor = .orange
+        view.backgroundColor = .secondarySystemBackground
         
     }
     
@@ -50,9 +48,9 @@ private extension PopulationController {
     }
 }
 
-/*
- // MARK: - Preview
+
+  // MARK: - Preview
  #Preview {
- MusicDetailsVC()
+ AirQualityController()
  }
- */
+ 
