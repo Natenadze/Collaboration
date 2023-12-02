@@ -24,7 +24,7 @@ final class PopulationController: UIViewController {
         textfield.layer.cornerRadius = 8
         textfield.autocorrectionType = .no
         textfield.autocapitalizationType = .words
-        textfield.placeholder = "Enter city name..."
+        textfield.placeholder = "Enter country name..."
         return textfield
     }()
     

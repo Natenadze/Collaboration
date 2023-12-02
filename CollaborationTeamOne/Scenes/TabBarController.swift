@@ -32,11 +32,11 @@ final class TabBarController: UITabBarController {
     
     private func setupTabs() {
         
-        let air = createNavigation("Air", UIImage(systemName: "house"), controller: AirQualityController())
-        let weather = createNavigation("Weather", UIImage(systemName: "person"), controller: WeatherController())
-        let specie = createNavigation("Specie", UIImage(systemName: "pencil"), controller: SpecieController())
-        let solar = createNavigation("Solar", UIImage(systemName: "lasso"), controller: SolarResourceController())
-        let population = createNavigation("Population", UIImage(systemName: "paperplane"), controller: PopulationController())
+        let air = createNavigation("Air", UIImage(systemName: "wind"), controller: AirQualityController())
+        let weather = createNavigation("Weather", UIImage(systemName: "thermometer.sun"), controller: WeatherController())
+        let specie = createNavigation("Specie", UIImage(systemName: "globe.europe.africa.fill"), controller: SpecieController())
+        let solar = createNavigation("Solar", UIImage(systemName: "sun.max"), controller: SolarResourceController())
+        let population = createNavigation("Population", UIImage(systemName: "person.3.fill"), controller: PopulationController())
         
         setViewControllers([air, weather, specie, solar, population], animated: true)
     }
